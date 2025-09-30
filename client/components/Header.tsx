@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles, Zap, Brain, Shield } from "lucide-react";
+import { Menu, X, Sparkles, Zap, Brain, Download } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showCVDropdown, setShowCVDropdown] = useState(false);
 
   const navItems = [
     { name: "Base Spatiale", href: "#", icon: "🚀" },
@@ -139,12 +140,34 @@ export default function Header() {
           </nav>
 
           {/* Desktop CTA Button */}
-          <div className="hidden md:flex">
-            <Button className="relative bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 text-white px-8 py-3 rounded-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden border border-white/20">
+          <div className="hidden md:flex relative">
+            <Button className="relative bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 text-white px-8 py-3 rounded-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden border border-white/20" onClick={() => setShowCVDropdown(!showCVDropdown)}>
               <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-cyan-500 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-              <Shield className="mr-2 h-5 w-5 relative z-10" />
-              <span className="relative z-10">ACCÈS SÉCURISÉ</span>
+              <Download className="mr-2 h-5 w-5 relative z-10" />
+              <span className="relative z-10">Download CV</span>
             </Button>
+            {showCVDropdown && (
+              <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-card shadow-lg ring-1 ring-border focus:outline-none z-50">
+                <div className="py-1">
+                  <a
+                    href="/certifications/cv%20de%20yasmine%20boukraiem%20(1).pdf"
+                    download="CV_Francais.pdf"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-accent"
+                    onClick={() => setShowCVDropdown(false)}
+                  >
+                    CV Français
+                  </a>
+                  <a
+                    href="/certifications/certification1.pdf"
+                    download="CV_English.pdf"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-accent"
+                    onClick={() => setShowCVDropdown(false)}
+                  >
+                    CV English
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -182,11 +205,33 @@ export default function Header() {
                     <span>{item.name}</span>
                   </a>
                 ))}
-                <div className="pt-4 border-t border-white/20">
-                  <Button className="w-full bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 text-white py-3 rounded-xl font-bold shadow-lg border border-white/20">
-                    <Shield className="mr-2 h-5 w-5" />
-                    ACCÈS SÉCURISÉ
+                <div className="pt-4 border-t border-white/20 relative">
+                  <Button className="w-full bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 text-white py-3 rounded-xl font-bold shadow-lg border border-white/20" onClick={() => setShowCVDropdown(!showCVDropdown)}>
+                    <Download className="mr-2 h-5 w-5" />
+                    Download CV
                   </Button>
+                  {showCVDropdown && (
+                    <div className="absolute left-0 mt-2 w-full origin-top rounded-md bg-card shadow-lg ring-1 ring-border focus:outline-none z-50">
+                      <div className="py-1">
+                        <a
+                          href="/certifications/cv%20de%20yasmine%20boukraiem%20(1).pdf"
+                          download="CV_Francais.pdf"
+                          className="block px-4 py-2 text-sm text-foreground hover:bg-accent"
+                          onClick={() => setShowCVDropdown(false)}
+                        >
+                          CV Français
+                        </a>
+                        <a
+                          href="/certifications/certification1.pdf"
+                          download="CV_English.pdf"
+                          className="block px-4 py-2 text-sm text-foreground hover:bg-accent"
+                          onClick={() => setShowCVDropdown(false)}
+                        >
+                          CV English
+                        </a>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

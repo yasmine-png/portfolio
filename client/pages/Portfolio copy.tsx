@@ -496,37 +496,28 @@ logo: "/logo/zhzinei investissement.png",
               <div className="flex items-center space-x-3">
                 <ThemeToggle />
                 <div className="relative inline-block text-left" tabIndex={0} onBlur={() => setShowNavCVDropdown(false)}>
-                  <Button
-                  variant="outline"
-                  size="lg"
-                  className="group shadow-lg hover:shadow-xl transition-all"
-                  onClick={() => setShowCVDropdown(!showCVDropdown)}
-                >
-                  <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-                  Download CV
-                </Button>
-                   {showCVDropdown && (
-                  <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-card shadow-lg ring-1 ring-border focus:outline-none z-50">
-                    <div className="py-1">
-                    <a
-                      href="/certifications/cv_de_yasmine_boukraiem.pdf"
-                      download="cv_de_yasmine_boukraiem.pdf"
-                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent w-full text-left"
-                      onClick={() => setShowCVDropdown(false)}
-                    >
-                      CV de Yasmine Boukraiem 1
-                    </a>
-                    <a
-                      href="/certifications/cv_de_yasmine_boukraiem_1.pdf"
-                      download="cv_de_yasmine_boukraiem_1.pdf"
-                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent w-full text-left"
-                      onClick={() => setShowCVDropdown(false)}
-                    >
-                      CV de Yasmine Boukraiem 2
-                    </a>
+                  <Button className="hidden md:flex bg-primary hover:bg-primary/90" onClick={() => setShowNavCVDropdown(!showNavCVDropdown)}>
+                    <Download className="mr-2 h-4 w-4" />
+                    Download CV
+                  </Button>
+                  {showNavCVDropdown && (
+                    <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-card shadow-lg ring-1 ring-border focus:outline-none z-50">
+                      <div className="py-1">
+                      <button
+                        onClick={() => downloadFile('/certifications/cv_de_yasmine_boukraiem.pdf', 'cv_de_yasmine_boukraiem.pdf')}
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-accent w-full text-left"
+                      >
+                        CV de Yasmine Boukraiem 1
+                      </button>
+                      <button
+                        onClick={() => downloadFile('/certifications/cv_de_yasmine_boukraiem_1.pdf', 'cv_de_yasmine_boukraiem_1.pdf')}
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-accent w-full text-left"
+                      >
+                        CV de Yasmine Boukraiem 2
+                      </button>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
                 </div>
               </div>
           </div>
@@ -551,7 +542,13 @@ logo: "/logo/zhzinei investissement.png",
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
               >
-                
+                <Badge
+                  variant="outline"
+                  className="mb-4 text-primary border-primary/50"
+                >
+                  <Star className="mr-2 h-3 w-3" />
+                  Available for freelance
+                </Badge>
               </motion.div>
 
               <motion.h1
@@ -582,43 +579,41 @@ logo: "/logo/zhzinei investissement.png",
               </motion.p>
 
               <motion.div className="flex flex-wrap gap-4" variants={fadeInUp}>
-              <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={scrollToContact}>
-                <Mail className="mr-2 h-4 w-4" />
-                Get In Touch
-              </Button>
-              <div className="relative inline-block text-left">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="group shadow-lg hover:shadow-xl transition-all"
-                  onClick={() => setShowCVDropdown(!showCVDropdown)}
-                >
-                  <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-                  Download CV
+                <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={scrollToContact}>
+                  <Mail className="mr-2 h-4 w-4" />
+                  Get In Touch
                 </Button>
-                {showCVDropdown && (
-                  <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-card shadow-lg ring-1 ring-border focus:outline-none z-50">
-                    <div className="py-1">
-                    <a
-                      href="/certifications/cv_de_yasmine_boukraiem.pdf"
-                      download="cv_de_yasmine_boukraiem.pdf"
-                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent w-full text-left"
-                      onClick={() => setShowCVDropdown(false)}
-                    >
-                      CV de Yasmine Boukraiem 1
-                    </a>
-                    <a
-                      href="/certifications/cv_de_yasmine_boukraiem_1.pdf"
-                      download="cv_de_yasmine_boukraiem_1.pdf"
-                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent w-full text-left"
-                      onClick={() => setShowCVDropdown(false)}
-                    >
-                      CV de Yasmine Boukraiem 2
-                    </a>
+                <div className="relative inline-block text-left" tabIndex={0} onBlur={() => setShowCVDropdown(false)}>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="group shadow-lg hover:shadow-xl transition-all"
+                    onClick={() => setShowCVDropdown(!showCVDropdown)}
+                  >
+                    <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+                    Download CV
+                  </Button>
+                  {showCVDropdown && (
+                    <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-card shadow-lg ring-1 ring-border focus:outline-none z-50">
+                      <div className="py-1">
+                      <a
+                        href="/certifications/cv_de_yasmine_boukraiem.pdf"
+                        download="cv_de_yasmine_boukraiem.pdf"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-accent"
+                      >
+                        CV de Yasmine Boukraiem 1
+                      </a>&
+                      <a
+                        href="/certifications/cv_de_yasmine_boukraiem_1.pdf"
+                        download="cv_de_yasmine_boukraiem_1.pdf"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-accent"
+                      >
+                        CV de Yasmine Boukraiem 2
+                      </a>
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
+                  )}
+                </div>
               </motion.div>
 
               <motion.div className="flex space-x-6 pt-6" variants={fadeInUp}>
