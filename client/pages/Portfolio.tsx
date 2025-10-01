@@ -509,20 +509,20 @@ logo: "/logo/zhzinei investissement.png",
                   <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-card shadow-lg ring-1 ring-border focus:outline-none z-50">
                     <div className="py-1">
                     <a
-                      href="/certifications/cv_de_yasmine_boukraiem.pdf"
-                      download="cv_de_yasmine_boukraiem.pdf"
+                      href="/certifications/CV_yasmine_boukraiem_français.pdf"
+                      download="CV_yasmine_boukraiem_français.pdf"
                       className="block px-4 py-2 text-sm text-foreground hover:bg-accent w-full text-left"
                       onClick={() => setShowCVDropdown(false)}
                     >
-                      CV de Yasmine Boukraiem 1
+                      French
                     </a>
                     <a
-                      href="/certifications/cv_de_yasmine_boukraiem_1.pdf"
-                      download="cv_de_yasmine_boukraiem_1.pdf"
+                      href="/certifications/Cv_yasmine_boukraiem_english.pdf"
+                      download="Cv_yasmine_boukraiem_english.pdf"
                       className="block px-4 py-2 text-sm text-foreground hover:bg-accent w-full text-left"
                       onClick={() => setShowCVDropdown(false)}
                     >
-                      CV de Yasmine Boukraiem 2
+                      English
                     </a>
                     </div>
                   </div>
@@ -600,20 +600,20 @@ logo: "/logo/zhzinei investissement.png",
                   <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-card shadow-lg ring-1 ring-border focus:outline-none z-50">
                     <div className="py-1">
                     <a
-                      href="/certifications/cv_de_yasmine_boukraiem.pdf"
-                      download="cv_de_yasmine_boukraiem.pdf"
+                      href="/certifications/CV_yasmine_boukraiem_français.pdf"
+                      download="CV_yasmine_boukraiem_français.pdf"
                       className="block px-4 py-2 text-sm text-foreground hover:bg-accent w-full text-left"
                       onClick={() => setShowCVDropdown(false)}
                     >
-                      CV de Yasmine Boukraiem 1
+                      French
                     </a>
                     <a
-                      href="/certifications/cv_de_yasmine_boukraiem_1.pdf"
-                      download="cv_de_yasmine_boukraiem_1.pdf"
+                      href="/certifications/Cv_yasmine_boukraiem_english.pdf"
+                      download="Cv_yasmine_boukraiem_english.pdf"
                       className="block px-4 py-2 text-sm text-foreground hover:bg-accent w-full text-left"
                       onClick={() => setShowCVDropdown(false)}
                     >
-                      CV de Yasmine Boukraiem 2
+                      English
                     </a>
                     </div>
                   </div>
