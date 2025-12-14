@@ -1054,6 +1054,7 @@ A comprehensive AI-powered web application combining computer vision, deep learn
 🔹 Anomaly detection via Autoencoder for identifying unusual patterns
 🔹 Advanced video processing with multi-object tracking (ByteTrack) and frame-by-frame analysis
 🔹 Precise segmentation with SAM (Segment Anything Model) for exact object contouring
+🔹 ONNX Runtime support for optimized inference and cross-platform compatibility
 🔹 Automatic risk assessment based on size and confidence (3 alert levels: High/Medium/Low)
 🔹 Analytical dashboard with real-time visualization and result filtering
 🔹 Data persistence with MongoDB for historical analysis and reporting
@@ -1061,7 +1062,7 @@ A comprehensive AI-powered web application combining computer vision, deep learn
 🔹 Full-stack architecture: React/TypeScript frontend with Tailwind CSS, Flask/Python backend with REST API
 🔹 Deployable via Docker, optimized for both CPU and GPU environments`,
                 image: "/picture of project/fod.jpg",
-                tech: ["React", "TypeScript", "Python", "Flask", "YOLOv8", "SAM", "Autoencoder", "PyTorch", "OpenCV", "MongoDB", "Docker", "ByteTrack", "Tailwind CSS", "Vite", "Supervision", "NumPy", "Pillow"],
+                tech: ["React", "TypeScript", "Python", "Flask", "YOLOv8", "SAM", "Autoencoder", "PyTorch", "OpenCV", "MongoDB", "Docker", "ByteTrack", "Tailwind CSS", "Vite", "Supervision", "NumPy", "Pillow", "ONNX Runtime"],
                 codeLink: "https://github.com/yasmine-png/foreign-Object-Debris-in-Airports-Detection-",
                 demoLink: "https://youtu.be/c9o5ZRv2ySg",
               },
