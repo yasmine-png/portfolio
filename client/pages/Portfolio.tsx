@@ -1044,6 +1044,28 @@ logo: "/logo/zhzinei investissement.png",
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {[
               {
+                title: "FOD Detection System",
+                description:
+                  "Airport runway FOD (Foreign Object Debris) detection system - A complete AI solution for detecting and managing foreign objects on landing strips to enhance aviation safety.",
+                detailedDescription: `
+A comprehensive AI-powered web application combining computer vision, deep learning, and an intuitive user interface for real-time detection of dangerous objects on airport runways.
+
+🔹 Real-time object detection using YOLOv8 (main model) optimized for airport scenarios
+🔹 Anomaly detection via Autoencoder for identifying unusual patterns
+🔹 Advanced video processing with multi-object tracking (ByteTrack) and frame-by-frame analysis
+🔹 Precise segmentation with SAM (Segment Anything Model) for exact object contouring
+🔹 Automatic risk assessment based on size and confidence (3 alert levels: High/Medium/Low)
+🔹 Analytical dashboard with real-time visualization and result filtering
+🔹 Data persistence with MongoDB for historical analysis and reporting
+🔹 Alert system with visual and audio notifications for dangerous objects
+🔹 Full-stack architecture: React/TypeScript frontend with Tailwind CSS, Flask/Python backend with REST API
+🔹 Deployable via Docker, optimized for both CPU and GPU environments`,
+                image: "/picture of project/fod.jpg",
+                tech: ["React", "TypeScript", "Python", "Flask", "YOLOv8", "SAM", "Autoencoder", "PyTorch", "OpenCV", "MongoDB", "Docker", "ByteTrack", "Tailwind CSS", "Vite", "Supervision", "NumPy", "Pillow"],
+                codeLink: "https://github.com/yasmine-png/foreign-Object-Debris-in-Airports-Detection-",
+                demoLink: "https://youtu.be/c9o5ZRv2ySg",
+              },
+              {
                 title: "Chatbot AI Assistant",
                 description:
                   "Development of an Autonomous Intelligent Chatbot.",
@@ -1139,7 +1161,7 @@ This project offers an intuitive user experience, with:
                       <h3 className="font-bold text-lg mb-3 group-hover:text-blue-600 transition-colors">
                         {project.title}
                       </h3>
-                      <p className={`text-muted-foreground text-sm mb-4 leading-relaxed ${project.title === "AI-Powered Tunisian ID Card Data Extraction & Face Verification System" || project.title === "Prospect Analysis Tool" ? "" : "line-clamp-3"}`}>
+                      <p className={`text-muted-foreground text-sm mb-4 leading-relaxed ${project.title === "AI-Powered Tunisian ID Card Data Extraction & Face Verification System" || project.title === "Prospect Analysis Tool" || project.title === "FOD Detection System" ? "" : "line-clamp-3"}`}>
                         {project.description}
                       </p>
 
@@ -1204,6 +1226,24 @@ This project offers an intuitive user experience, with:
                       )}
 
                       {project.title === "Web Developer / Creator of the Jass Flash e-commerce site" && (
+                        <div className="flex justify-center mb-4">
+                          <Button
+                            variant="default"
+                            size="sm"
+                            onClick={() => toggleProjectExpansion(project.title)}
+                          >
+                            {expandedProjects.has(project.title) ? "Show Less Details" : "Show More Details"}
+                          </Button>
+                        </div>
+                      )}
+
+                      {project.title === "FOD Detection System" && expandedProjects.has(project.title) && (
+                        <div className="text-sm text-muted-foreground whitespace-pre-line mb-4">
+                          {project.detailedDescription}
+                        </div>
+                      )}
+
+                      {project.title === "FOD Detection System" && (
                         <div className="flex justify-center mb-4">
                           <Button
                             variant="default"
